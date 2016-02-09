@@ -26,47 +26,47 @@ Each incident record includes the call number, incident number, address, number 
 
 The incident number in the record set
 
-** address **
+**address**
 
 Street address of incident. 
 
-** zip code ** 
+**zip code** 
 
 Zip code in SF the address belongs to. 
 
-** incident_date ** 
+**incident_date** 
 
 Incident date.
 
-** alarm_dttm ** 
+**alarm_dttm** 
 
 Fire incident reported date and time. 
 
-** arrival_dttm ** 
+**arrival_dttm** 
 
 Fire personnel arrival date and time. 
 
-** close_dttm ** 
+**close_dttm** 
 
 Case closing date and time. 
 
-** primary_situation ** 
+**primary_situation** 
 
 What was described in the call about the problem. 
 
-** action_taken_primary ** 
+**action_taken_primary** 
 
 What action was taken by the fire department. 
 
-** property_use ** 
+**property_use** 
 
 Type of property - 1 bed/ 2 bed/ first floor, 2nd floor etc. 
 
-** neighborhood_district ** 
+**neighborhood_district** 
 
 SF neigbhourhood of the address, like Lower Heights, Tenderloin etc. 
 
-** location ** 
+**location** 
 
 Location of the incident - latitude and longitude. 
 
