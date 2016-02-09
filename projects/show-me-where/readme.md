@@ -16,7 +16,6 @@ Each incident record includes the call number, incident number, address, number 
 - CSV and XCEL formats are also available. 
 - There are roughly 391,000 records since 1/1/2003.
 - It is published every day. 
-
 - 2016 Incidents only URL: [https://data.sfgov.org/Public-Safety/2016-incidents/inut-uybi](https://data.sfgov.org/Public-Safety/2016-incidents/inut-uybi)
 - 2016 Incidents only JSON: [https://data.sfgov.org/api/views/inut-uybi/rows.json?accessType=DOWNLOAD](https://data.sfgov.org/api/views/inut-uybi/rows.json?accessType=DOWNLOAD)
 
