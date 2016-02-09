@@ -23,83 +23,71 @@ Each incident record includes the call number, incident number, address, number 
 ### A description of each of the fields
 
 **incident_number**
+
 The incident number in the record set
 
-address 
-incident_date 
-alarm_dttm
-arrival_dttm
-close_dttm
-city
-zipcode
-battalion
-station_area
-box
-suppression_units
-suppression_personnel
-ems_units
-ems_personnel
-other_units
-other_personnel
-first_unit_on_scene
-estimated_property_loss
-estimated_contents_loss
-fire_fatalities
-fire_injuries
-civilian_fatalities
-civilian_injuries
-number_of_alarms
-primary_situation
-mutual_aid
-action_taken_primary
-action_taken_secondary
-action_taken_other
-detector_alerted_occupants
-property_use
-area_of_fire_origin
-ignition_cause
-ignition_factor_primary
-ignition_factor_secondary
-heat_source
-item_first_ignited
-human_factors_associated_with_ignition
-structure_type
-structure_status
-floor_of_fire_origin
-fire_spread
-no_flame_spead
-number_of_floors_with_minimum_damage
-number_of_floors_with_significant_damage
-number_of_floors_with_heavy_damage
-number_of_floors_with_extreme_damage
-detectors_present
-detector_type
-detector_operation
-detector_effectiveness
-detector_failure_reason
-automatic_extinguishing_system_present
-automatic_extinguishing_sytem_type
-automatic_extinguishing_sytem_perfomance
-automatic_extinguishing_sytem_failure_reason
-number_of_sprinkler_heads_operating
-supervisor_district
-neighborhood_district
-location
+** address **
 
+Street address of incident. 
+
+** zip code ** 
+
+Zip code in SF the address belongs to. 
+
+** incident_date ** 
+
+Incident date.
+
+** alarm_dttm ** 
+
+Fire incident reported date and time. 
+
+** arrival_dttm ** 
+
+Fire personnel arrival date and time. 
+
+** close_dttm ** 
+
+Case closing date and time. 
+
+** primary_situation ** 
+
+What was described in the call about the problem. 
+
+** action_taken_primary ** 
+
+What action was taken by the fire department. 
+
+** property_use ** 
+
+Type of property - 1 bed/ 2 bed/ first floor, 2nd floor etc. 
+
+** neighborhood_district ** 
+
+SF neigbhourhood of the address, like Lower Heights, Tenderloin etc. 
+
+** location ** 
+
+Location of the incident - latitude and longitude. 
 
 ## Anticipated "data wrangling"
 
-I plan to trim the dataset to show only the records from 1 Jan 2016. 
+I plan to trim the dataset to carry only the records from 1 Jan 2016. 
 
-There are 63 columns in the main data set and I am only interested in some of them. So I might rexport a new dataset with lesser coluumns after I finish the exercise. 
+There are 63 columns in the main data set and I am only interested in some of them. So I might re-export a new dataset with lesser coluumns after I finish the exercise. 
 
 For the initial wrangling, I plan to use address, lat-long, primary situation description, action taken, neighbourhood, alarm dispatch time, arrival time, and closure time. 
 
 I want to be able to see:
+- Whether there any patterns on day-of-the-week calls or weekends in terms of distribution 
 - Which neighbourhoods get the most calls
-- What type of primary situations are the most common etc
-- What property types the calls come from 
+- What type of primary situations that lead to calls are the most common
+- What property types (home, appartment, condo..etc.) the calls come from 
 - What type of action takens are most common
 - Are there any unusual call closure times 
 
-Address is already in text, lat and long are already in separate fields per incident record and likewise for most of other fields. Timestamps will need a split strong around the 'T' character to split the time and date. The primary situation, action taken fields are text fields preceded by numercial codes in one string. I will have to extract the numerical codes and count by instances to see the most common. 
+What is there in the data 
+- The caller address is already in text, lat and long are already in separate fields per incident record and likewise for most of other fields. 
+- Timestamps will need a split strong around the 'T' character to split the time and date.
+- The primary situation, action taken fields are text fields preceded by numercial codes in one string. I will have to extract the numerical codes and count by instances to see the most common. 
+
